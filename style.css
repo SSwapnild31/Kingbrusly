@@ -1,0 +1,135 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar (Vertical Navbar) for larger screens */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the content is spaced between the top and bottom */
+    padding: 20px 0;
+}
+
+/* Nav items styling */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Social Menu at the bottom */
+.social-menu {
+    margin-top: auto; /* Ensures it stays at the bottom */
+    text-align: center;
+}
+
+.social-menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.social-menu ul li {
+    margin: 5 50px;
+}
+
+.social-menu ul li a {
+    font-size: 20px;
+    color: white; /* White to match the navbar */
+    text-decoration: none;
+}
+
+.social-menu ul li a:hover {
+    color: #555;
+}
+
+/* Main container */
+.container {
+    margin-left: 270px; /* Space for sidebar */
+    padding: 20px;
+    width: calc(100% - 270px); /* Full width minus sidebar */
+    box-sizing: border-box;
+}
+
+.container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 20%;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px, navbar goes to the top */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin: 0;
+        width: auto;
+    }
+
+    .sidebar ul li a {
+        padding: 10px 15px;
+    }
+
+    /* Container takes full width */
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
